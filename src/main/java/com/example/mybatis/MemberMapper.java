@@ -13,4 +13,6 @@ public interface MemberMapper {
 
     ArrayList<HashMap<String, Object>> findAll();
     HashMap<String, Object> findByName(@Param("name") String name);
+
+    void insertMember(@Param("name") String name, @Param("age") int age);
 }

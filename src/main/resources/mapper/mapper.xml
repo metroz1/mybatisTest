@@ -9,4 +9,8 @@
     <select id="findByName" resultType="HashMap">
         select * from member where name = #{name}
     </select>
+
+    <insert id="insertMember">
+        insert into member (name, age) values (#{name}, #{age})
+    </insert>
 </mapper>

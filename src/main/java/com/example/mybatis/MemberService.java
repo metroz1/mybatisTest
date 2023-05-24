@@ -28,5 +28,12 @@ public class MemberService {
         return new ResponseEntity<>(member, HttpStatus.OK);
     }
 
+    public ResponseEntity<?> insertMemeber(MemberRequestDto memberRequestDto) {
+
+        memberMapper.insertMember(memberRequestDto.getName(), memberRequestDto.getAge());
+
+        return new ResponseEntity<>("데이터 입력 성공", HttpStatus.OK);
+    }
+
 
 }
